@@ -18,12 +18,33 @@
 	box-sizing: border-box;
 }
 
-html { height: 100%; }
+html,
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+
+#whole-page-container {
+	min-height:100%;
+	position:relative;
+}
+
+#whole-page-content-container {
+	padding-bottom: 5em;
+}
+
+section.site-footer {
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height: 5em;   /* Height of the footer */
+}
+
 body {
 	font-family: "Muli", sans-serif;
 	background-color: #303333;
 	color: #ccc;
-	height: 100%;
 }
 
 a {
@@ -76,9 +97,10 @@ section.jumbo h1 {
 }
 
 .site-footer {
-	margin-top: 10em;
+	margin-top: 3em;
 	font-size: .75em;
 	padding: 1em;
+	text-align: center;
 }
 
 .site-footer .copyright,
@@ -109,6 +131,18 @@ section.jumbo h1 {
 }
 
 @media only screen and (min-width: 768px) {
+	.site-footer .copyright {
+		float: left;
+	}
+	.site-footer .press {
+		float: right;
+	}
+	#whole-page-content-container {
+		padding-bottom: 3.5em;
+	}
+	section.site-footer {
+		height: 3.5em;   /* Height of the footer */
+	}
 }
 
 @media only screen and (min-width: 992px) {
