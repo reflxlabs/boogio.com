@@ -1,0 +1,5 @@
+/.sculpin/
+/app/config/sculpin_kernel_dev.yml
+/app/config/sculpin_site_dev.yml
+/output_*/
+/source/components/
