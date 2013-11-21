@@ -95,6 +95,10 @@ section.jumbo h1 {
 .index-page .social-media ul.nav a {
 	font-size: 1.5em;
 }
+.index-page .social-media ul.nav i {
+	width: 21px;
+	display: inline-block;
+}
 
 .site-footer {
 	margin-top: 3em;
