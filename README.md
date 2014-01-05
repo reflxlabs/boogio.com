@@ -12,6 +12,7 @@ Powered by [Sculpin](https://sculpin.io). =)
 Build
 -----
 
+    sculpin install
     sculpin generate --server --watch
 
 Your newly generated clone of [boogio.com](http://boogio.com) is now accessible
@@ -20,6 +21,7 @@ at `http://localhost:8000/`.
 ### If You Need Sculpin
 
     curl -O https://download.sculpin.io/sculpin.phar
+    php sculpin.phar install
     php sculpin.phar generate --server --watch
 
 
