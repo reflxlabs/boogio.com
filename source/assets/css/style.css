@@ -38,8 +38,13 @@
 }
 
 .promo {
-	margin: 1.5em auto;
-	max-width: 300px;
+	max-width: 800px;
+	margin: 3em auto;
+	padding: 1em 50px;
+}
+
+.promo img {
+	margin: 0 auto;
 }
 
 html,
@@ -47,6 +52,22 @@ body {
 	margin: 0;
 	padding: 0;
 	height: 100%;
+}
+
+a.poster {
+	position: relative;
+	display: block;
+}
+a.poster:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    margin-left: -50%;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: transparent url(play_button.png) no-repeat center;
+    pointer-events: none;
 }
 
 /*
@@ -147,10 +168,12 @@ h2.position {
 
 .bio .headshot-wrapper {
 	max-width: 200px;
+	max-height: 200px;
 }
 
 .bio-headshot-wrapper {
 	max-width: 200px;
+	max-height: 200px;
 }
 
 
@@ -240,6 +263,12 @@ section.jumbo h1 {
 	display: inline-block;
 }
 
+.index-page .hero {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 1em 50px;
+}
+
 .site-footer {
 	margin-top: 3em;
 	font-size: .75em;
@@ -259,10 +288,22 @@ section.jumbo h1 {
 	color: #A7A8A8;
 }
 
+.media-video .video a.poster:after {
+	margin-left: 0;
+}
+
+.media-video {
+	margin-bottom: 2em;
+}
+
 @media only screen and (max-width: 420px) {
 	.bio.col-xs-6 {
 		width: 100%;
 		clear: left;
+	}
+
+	a.poster:after {
+		background-size: 50px 50px;
 	}
 }
 
@@ -307,6 +348,7 @@ section.jumbo h1 {
 @media only screen and (min-width: 992px) {
 	.bio-headshot-wrapper {
 		max-width: 300px;
+		max-height: 300px;
 	}
 	section.jumbo h1 {
 		background-image: url(logo-large.png);
@@ -319,6 +361,10 @@ section.jumbo h1 {
 }
 
 @media only screen and (min-width: 1200px) {
+	.video-container-standalone {
+		max-width: 940px;
+		margin: 0 auto;
+	}
 }
 
 @media only screen and (min-width: 420px) and (max-width: 991px) {

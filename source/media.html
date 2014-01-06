@@ -1,0 +1,20 @@
+---
+layout: default
+title: Media
+use:
+    - videos
+
+---
+
+<h1>Media</h1>
+<h2>Videos</h2>
+{% for video in data.videos %}
+    <div class="media-video col-md-4">
+        <div class="video">
+            <a class="poster" title="{{ video.title }}" href="{{ video.url }}">
+                <img class="img-responsive" src="{{ site.url }}/assets/media/{{ video.poster }}" alt="{{ video.title }}">
+            </a>
+            <a title="{{ video.title }}" href="{{ video.url }}">{{ video.title }}</a>
+        </div>
+    </div>
+{% endfor %}

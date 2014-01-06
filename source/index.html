@@ -1,5 +1,7 @@
 ---
 layout: default
+use:
+    - videos
 ---
 {% block jumbo %}
     <section class="jumbo">
@@ -13,17 +15,18 @@ layout: default
         <span>Make Your Move</span>
     </div>
 
-    <p>
-        We'll be at <a title="CES" href="http://www.cesweb.org/">CES 2014</a>. Will you?
-    </p>
-
+    <div class="hero">
+        <img class="img-responsive" src="{{ site.url }}/assets/images/Boogio_hero.png" alt="Boogio">
+    </div>
 
     <div class="promo">
-        <p>
-            <a title="Watch Boogio recap from SIC 2013" href="http://vimeo.com/79369673">
-                <img class="img-responsive" src="{{ site.url }}/assets/images/sic2013-video-poster.jpg" alt="Video Poster">
-            </a>
-        </p>
+        {% for video in data.videos if video.featured_video == true %}
+            <p>
+                <a class="poster" title="{{ video.title }}" href="{{ video.url }}">
+                    <img class="img-responsive" src="{{ site.url }}/assets/media/{{ video.poster }}" alt="{{ video.title }}">
+                </a>
+            </p>
+        {% endfor %}
     </div>
 
     <div class="social-media">
@@ -32,11 +35,5 @@ layout: default
             <li><a title="Like us on Facebook" href="https://facebook.com/wearboogio"><i class="icon icon-facebook"></i></a></li>
         </ul>
     </div>
-
-    <p>
-        <br>
-        <strong>October 28th, 2013</strong><br>
-        <a title="REFLX Labs debuts Boogio wearable technology at SIC 2013 (10/28/2013)" href="http://reflxlabsinc.com/press/2013/10/28/REFLX_Boogio_PressRelease_102813/">REFLX Labs debuts Boogio wearable technology at SIC 2013</a>
-    </p>
 </div>
 {% endblock %}

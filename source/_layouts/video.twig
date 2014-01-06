@@ -1,0 +1,11 @@
+{% extends "base.twig" %}
+{% block content %}
+
+<div class="video-container-standalone">
+<div class="video-container">
+	<iframe src="//player.vimeo.com/video/{{ page.vimeo_id }}?title=0&amp;byline=0&amp;portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+<h4>{{ page.title }}</h4>
+</div>
+
+{% endblock %}
