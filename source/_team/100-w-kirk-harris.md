@@ -5,7 +5,7 @@ permalink: team/dr-w-kirk-harris/
 name: Dr. W Kirk Harris
 position: Advisor
 bio_type: advisor
-bio_link: false
+skip_bio_link: true
 
 ---
 {% block mini_bio %}

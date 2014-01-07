@@ -5,7 +5,7 @@ permalink: team/dj-james-ham/
 name: Dr. James Ham
 position: Advisor
 bio_type: advisor
-bio_link: false
+skip_bio_link: true
 
 ---
 {% block mini_bio %}
