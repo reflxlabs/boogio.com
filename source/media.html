@@ -4,6 +4,30 @@ title: Media
 use:
     - videos
 
+links:
+    highlights:
+        - http://www.sfgate.com/technology/slideshow/2014-International-CES-77475/photo-5703595.php
+        - http://phys.org/news/2014-01-technology-aims-shot-golf.html
+        - http://news.kuwaittimes.net/pdf/2014/jan/11/p28.pdf
+        - http://news.yahoo.com/technology-aims-perfect-jump-shot-golf-swing-190913191.html
+        - http://www.mommyblogexpert.com/2014/01/wearable-fashion-tech-plentiful-from.html
+        - http://blog.broadcom.com/ces/whats-the-market-size-for-wearables-bigger-than-you-think-says-ces-expert/
+    regular:
+        - http://healthpopuli.com/2014/01/08/wear-it-well-fashion-mashes-up-with-health-at-ces2014/
+        - http://www.themarker.com/technation/1.2213777#4
+        - http://www.newstimes.com/news/slideshow/2014-International-CES-public-opening-77353.php#photo-5703595
+        - http://techno.lapresse.ca/nouvelles/produits-electroniques/201401/10/01-4727575-la-technologie-au-service-des-sportifs.php
+        - http://www.newsday.com/business/press-releases/reflx-labs-announces-next-generation-boogio-wearable-technology-at-ces-2014-1.6770345
+        - http://www.limit.ws/technology-aims-for-perfect-jump-shot-golf-swing/
+        - http://soviders.org/2014/01/11/technology-aims-for-perfect-jump-shot-golf-swing/?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+soviders%2Ftwwt+(Soviders+Tech)
+        - http://www.notretemps.com/internet/a-las-vegas-la-technologie-se-met-au,i44533
+        - http://www.globalpost.com/dispatch/news/afp/140110/technology-aims-perfect-jump-shot-golf-swing-0
+        - http://timesofindia.indiatimes.com/sports/more-sports/others/Technology-aims-for-perfect-jump-shot-golf-swing/articleshow/28655696.cms
+        - http://borneobulletin.brunei-online.com/index.php/2014/01/12/technology-aims-for-perfect-jump-shot-golf-swing/
+        - http://www.space-travel.com/reports/Technology_aims_for_perfect_jump_shot_golf_swing_999.html
+        - http://www.ambito.com/noticia.asp?id=724044
+        - http://noticias.terra.com.ar/sociedad/deporte-y-tecnologia-se-unieron-en-feria-ces-de-tecnologia-en-las-vegas,c13f0c062a873410VgnCLD2000000dc6eb0aRCRD.html
+
 ---
 
 <h1>Media</h1>
@@ -18,3 +42,14 @@ use:
         </div>
     </div>
 {% endfor %}
+
+<hr style="clear: both; margin: 2em 0;">
+
+<h2>In The Press</h2>
+<ul class="media-links">
+    {% for type,links in page.links %}
+        {% for link in links %}
+            <li class="link-{{ type }}"><a href="{{ link }}">{{ link }}</a></li>
+        {% endfor %}
+    {% endfor %}
+</ul>

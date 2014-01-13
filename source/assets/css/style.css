@@ -302,6 +302,13 @@ section.jumbo h1 {
 	margin-bottom: 3em;
 }
 
+ul.media-links li.link-highlights {
+	font-size: 1.25em;
+}
+ul.media-links li.link-regular {
+	opacity: .75;
+}
+
 @media only screen and (max-width: 420px) {
 	.bio.col-xs-6 {
 		width: 100%;
