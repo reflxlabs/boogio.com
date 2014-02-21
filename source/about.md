@@ -12,6 +12,8 @@ Designed and built by a team of engineers who specialize in sensing technology f
 
 Boogio is a product of [REFLX Labs, Inc](http://reflxlabsinc.com).
 
+**Pioneered in Seattle**
+
 ### Contact Us:
 
 [press@reflxlabsinc.com](mailto:press@reflxlabsinc.com)<br>

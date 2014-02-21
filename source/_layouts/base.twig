@@ -43,7 +43,7 @@
               <li><a href="{{ site.url }}/about/">About</a></li>
               <li><a href="{{ site.url }}/team/">Team</a></li>
               <li><a href="{{ site.url }}/media/">Media</a></li>
-              <li><a href="http://ces2014.boogio.com/">Early Access Program</a></li>
+              <li><a href="{{ site.url }}/newsletter/">Newsletter</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="http://reflxlabsinc.com/press/">Press</a></li>
@@ -84,6 +84,27 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="{{site.url}}/components/jquery/jquery.min.js"><\/script>')</script>
     <script src="{{ site.url }}/components/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('form.validate').on('submit', function (e) {
+                var isValid = true;
+
+                var $form = $(this);
+                $form.find('input.required').each(function() {
+                    var $field = $(this);
+
+                    if ($.trim($field.val()).length == 0){
+                        $field.closest('.form-group').addClass('has-error');
+                        isValid = false;
+                    } else {
+                        $field.closest('.form-group').removeClass('has-error');
+                    }
+                });
+
+                return isValid;
+            });
+        });
+    </script>
     {% if site.google_analytics_tracking_id %}
       <script>
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

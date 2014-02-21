@@ -22,14 +22,55 @@ use:
         <img class="img-responsive" src="{{ site.url }}/assets/images/Boogio_hero.png" alt="Boogio">
     </div>
 
-    <div class="promo">
-        {% for video in data.videos if video.featured_video == true %}
+    {% for video in data.videos if video.featured_video == true %}
+        <div class="promo">
             <p>
                 <a class="poster" title="{{ video.title }}" href="{{ video.url }}">
                     <img class="img-responsive" src="{{ site.url }}/assets/media/{{ video.poster }}" alt="{{ video.title }}">
                 </a>
             </p>
-        {% endfor %}
+        </div>
+    {% endfor %}
+
+    <div class="newsletter">
+        <h1>Subscribe to the Boogio R&amp;D Newsletter</h1>
+        <p>
+            Are you excited about Boogio? Would you love to get your hands on a dev kit and start developing Boogio-aware applications as soon as possible? Sign up for the Boogio R&amp;D Newsletter to keep updated on Boogio's development, availability of dev kits, and SDK announcements.
+        </p>
+
+        <!-- Begin MailChimp Signup Form -->
+        <div id="mc_embed_signup">
+            <form action="http://reflxlabsinc.us3.list-manage1.com/subscribe/post?u=fa832e0515f3b3b116be49f29&amp;id=d3842b5118" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate form-inline" target="_blank" role="form" novalidate>
+                <div class="mc-field-group form-group">
+                    <label for="mce-EMAIL" class="sr-only control-label">Email Address</label>
+                    <div>
+                        <input type="email" value="" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="Email address">
+                        <span class="help-block">This field is required.</span>
+                    </div>
+                </div>
+                <div class="mc-field-group form-group">
+                    <label for="mce-FNAME" class="sr-only control-label">First Name</label>
+                    <div>
+                        <input type="text" value="" name="FNAME" class="  form-control" id="mce-FNAME" placeholder="First name">
+                    </div>
+                </div>
+                <div class="mc-field-group form-group">
+                    <label for="mce-LNAME" class="sr-only control-label">Last Name</label>
+                    <div>
+                        <input type="text" value="" name="LNAME" class="  form-control" id="mce-LNAME" placeholder="Last name">
+                    </div>
+                </div>
+                <div class="mc-field-group form-group">
+                    <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    <div style="position: absolute; left: -5000px;"><input type="text" name="b_fa832e0515f3b3b116be49f29_d3842b5118" value=""></div>
+                    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-lg"></div>
+                </div>
+            </form>
+        </div>
+        <!--End mc_embed_signup-->
     </div>
 
     <div class="social-media">
